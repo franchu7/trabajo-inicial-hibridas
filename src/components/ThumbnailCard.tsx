@@ -16,13 +16,13 @@ const ThumbnailCard: React.FC<ThumbnailCardProps> = ({ imageSrc, description, ti
       </IonThumbnail>
 
       <IonCardHeader>
-        <IonCardSubtitle>{description}</IonCardSubtitle>
+        <IonCardSubtitle className='thumbail-subtitle'>{description}</IonCardSubtitle>
       </IonCardHeader>
 
       <IonCardContent>
         <IonButton color={'light'}>View</IonButton>
         <IonButton color={'light'}>Edit</IonButton>
-        <p>{time}</p>
+        <p className='ion-float-end'>{time}</p>
       </IonCardContent>
     </IonCard>
   )

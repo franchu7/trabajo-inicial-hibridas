@@ -18,6 +18,7 @@ import '@ionic/react/css/display.css'
 
 import AlbumCard from './components/AlbumCard'
 import ThumbnailCard from './components/ThumbnailCard'
+import './App.css'
 
 setupIonicReact()
 
@@ -28,19 +29,34 @@ const App: React.FC = () => (
         <IonGrid>
           <IonRow>
             <IonCol>
-              <AlbumCard title='Album example' description='Something short and leading about the collection bellow--its contents, the creator, etc. Make it short and sweet, but not too short so folks dont simply skip over entirely.' />
+              <AlbumCard
+                title='Album example'
+                description='Something short and leading about the collection bellow--its contents, the creator, etc. Make it short and sweet, but not too short so folks dont simply skip over entirely.'
+              />
             </IonCol>
           </IonRow>
 
-          <IonRow>
-          <IonCol size-lg="4" size-md="6" size-sm="6" size-xs="12">
-              <ThumbnailCard imageSrc='imgs/smiley.png' description='Card 1' time='9 mins' />
+          <IonRow className='thumbnails-row'>
+            <IonCol size-lg='4' size-md='6' size-sm='6' size-xs='12'>
+              <ThumbnailCard
+                imageSrc='imgs/smiley.png'
+                description='This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+                time='9 mins'
+              />
             </IonCol>
-            <IonCol size-lg="4" size-md="6" size-sm="6" size-xs="12">
-              <ThumbnailCard imageSrc='imgs/sad.png' description='Card 2' time='9 mins' />
+            <IonCol size-lg='4' size-md='6' size-sm='6' size-xs='12'>
+              <ThumbnailCard
+                imageSrc='imgs/sad.png'
+                description='This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+                time='9 mins'
+              />
             </IonCol>
-            <IonCol size-lg="4" size-md="6" size-sm="6" size-xs="12">
-              <ThumbnailCard imageSrc='imgs/angry.png' description='Card 3' time='9 mins' />
+            <IonCol size-lg='4' size-md='6' size-sm='6' size-xs='12'>
+              <ThumbnailCard
+                imageSrc='imgs/angry.png'
+                description='This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+                time='9 mins'
+              />
             </IonCol>
           </IonRow>
         </IonGrid>
