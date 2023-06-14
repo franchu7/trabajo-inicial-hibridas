@@ -18,17 +18,23 @@ import '@ionic/react/css/display.css'
 
 import AlbumCard from './components/AlbumCard'
 import ThumbnailCard from './components/ThumbnailCard'
+import { ReactElement } from 'react'
 import './App.css'
 
 setupIonicReact()
 
-const App: React.FC = () => (
+/**
+ * Componente principal de la aplicación
+ * @returns {ReactElement} Componente principal de la aplicación
+ */
+const App: React.FC = (): ReactElement => (
   <IonApp>
     <IonPage>
       <IonContent>
         <IonGrid>
           <IonRow>
             <IonCol>
+              {/* Renderiza el componente del AlbumCard */}
               <AlbumCard
                 title='Album example'
                 description='Something short and leading about the collection bellow--its contents, the creator, etc. Make it short and sweet, but not too short so folks dont simply skip over entirely.'
@@ -38,6 +44,7 @@ const App: React.FC = () => (
 
           <IonRow className='thumbnails-row'>
             <IonCol size-lg='4' size-md='6' size-sm='6' size-xs='12'>
+              {/* Renderiza el primer ThumbnailCard */}
               <ThumbnailCard
                 imageSrc='imgs/smiley.png'
                 description='This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
@@ -45,6 +52,7 @@ const App: React.FC = () => (
               />
             </IonCol>
             <IonCol size-lg='4' size-md='6' size-sm='6' size-xs='12'>
+              {/* Renderiza el segundo ThumbnailCard */}
               <ThumbnailCard
                 imageSrc='imgs/sad.png'
                 description='This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
@@ -52,6 +60,7 @@ const App: React.FC = () => (
               />
             </IonCol>
             <IonCol size-lg='4' size-md='6' size-sm='6' size-xs='12'>
+              {/* Renderiza el tercer ThumbnailCard */}
               <ThumbnailCard
                 imageSrc='imgs/angry.png'
                 description='This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
